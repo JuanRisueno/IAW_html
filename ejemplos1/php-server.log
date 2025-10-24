@@ -1,0 +1,355 @@
+[Fri Oct 17 12:07:34 2025] PHP 8.3.6 Development Server (http://0.0.0.0:8080) started
+[Fri Oct 17 12:10:01 2025] 127.0.0.1:49694 Accepted
+[Fri Oct 17 12:10:01 2025] 127.0.0.1:49694 [404]: GET / - No such file or directory
+[Fri Oct 17 12:10:01 2025] 127.0.0.1:49694 Closing
+[Fri Oct 17 12:10:42 2025] 127.0.0.1:55536 Accepted
+[Fri Oct 17 12:10:42 2025] 127.0.0.1:55536 [404]: GET / - No such file or directory
+[Fri Oct 17 12:10:42 2025] 127.0.0.1:55536 Closing
+[Fri Oct 17 12:11:03 2025] 127.0.0.1:37000 Accepted
+[Fri Oct 17 12:11:03 2025] 127.0.0.1:37000 [404]: GET / - No such file or directory
+[Fri Oct 17 12:11:03 2025] 127.0.0.1:37000 Closing
+[Fri Oct 17 12:11:31 2025] 127.0.0.1:57934 Accepted
+[Fri Oct 17 12:11:31 2025] 127.0.0.1:57934 [200]: GET /1.9.php?edad=19&&permiso=si
+[Fri Oct 17 12:11:31 2025] 127.0.0.1:57934 Closing
+[Fri Oct 17 12:11:44 2025] 127.0.0.1:40178 Accepted
+[Fri Oct 17 12:11:44 2025] 127.0.0.1:40178 [200]: GET /1.9.php?edad=19&&permiso=si
+[Fri Oct 17 12:11:44 2025] 127.0.0.1:40178 Closing
+[Fri Oct 17 12:12:15 2025] 127.0.0.1:46662 Accepted
+[Fri Oct 17 12:12:15 2025] 127.0.0.1:46662 [200]: POST /1.9.php?edad=19&&permiso=si
+[Fri Oct 17 12:12:15 2025] 127.0.0.1:46662 Closing
+[Fri Oct 17 12:12:21 2025] 127.0.0.1:41248 Accepted
+[Fri Oct 17 12:12:21 2025] 127.0.0.1:41248 [200]: GET /1.9.php?edad=19&&permiso=si
+[Fri Oct 17 12:12:21 2025] 127.0.0.1:41248 Closing
+[Fri Oct 17 12:13:27 2025] 127.0.0.1:50172 Accepted
+[Fri Oct 17 12:13:27 2025] 127.0.0.1:50172 [200]: GET /1.13.php?peso=80&&altura=180
+[Fri Oct 17 12:13:27 2025] 127.0.0.1:50172 Closing
+[Fri Oct 17 12:21:57 2025] 127.0.0.1:48214 Accepted
+[Fri Oct 17 12:21:57 2025] 127.0.0.1:48214 [404]: GET /ejemplos2-1/ejemplo.php - No such file or directory
+[Fri Oct 17 12:21:57 2025] 127.0.0.1:48214 Closing
+[Fri Oct 17 12:22:06 2025] 127.0.0.1:56624 Accepted
+[Fri Oct 17 12:22:06 2025] 127.0.0.1:56624 [404]: GET /ejemplo.php - No such file or directory
+[Fri Oct 17 12:22:06 2025] 127.0.0.1:56624 Closing
+[Fri Oct 17 12:22:20 2025] 127.0.0.1:50140 Accepted
+[Fri Oct 17 12:22:20 2025] 127.0.0.1:50140 [404]: GET /ejemplos2-1/ejemplo.php - No such file or directory
+[Fri Oct 17 12:22:20 2025] 127.0.0.1:50140 Closing
+[Fri Oct 17 12:22:45 2025] 127.0.0.1:59376 Accepted
+[Fri Oct 17 12:22:45 2025] 127.0.0.1:59376 [404]: GET /ejemplos.php - No such file or directory
+[Fri Oct 17 12:22:45 2025] 127.0.0.1:59376 Closing
+[Fri Oct 17 12:23:43 2025] 127.0.0.1:55868 Accepted
+[Fri Oct 17 12:23:43 2025] PHP Warning:  Undefined array key "masa" in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/1.1.php on line 15
+[Fri Oct 17 12:23:43 2025] 127.0.0.1:55868 [200]: GET /1.1.php
+[Fri Oct 17 12:23:43 2025] 127.0.0.1:55868 Closing
+[Fri Oct 17 12:23:43 2025] 127.0.0.1:55872 Accepted
+[Fri Oct 17 12:23:43 2025] 127.0.0.1:55872 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Oct 17 12:23:43 2025] 127.0.0.1:55872 Closing
+[Fri Oct 17 12:23:48 2025] 127.0.0.1:55876 Accepted
+[Fri Oct 17 12:23:48 2025] 127.0.0.1:55876 [200]: GET /ejemplo.php
+[Fri Oct 17 12:23:48 2025] 127.0.0.1:55876 Closing
+[Fri Oct 17 12:24:03 2025] 127.0.0.1:38196 Accepted
+[Fri Oct 17 12:24:03 2025] 127.0.0.1:38196 [200]: GET /ejemplo.php
+[Fri Oct 17 12:24:03 2025] 127.0.0.1:38196 Closing
+[Fri Oct 17 12:25:47 2025] 127.0.0.1:45618 Accepted
+[Fri Oct 17 12:25:47 2025] 127.0.0.1:45618 [200]: POST /saludar.php
+[Fri Oct 17 12:25:47 2025] 127.0.0.1:45618 Closing
+[Fri Oct 17 12:27:00 2025] 127.0.0.1:51362 Accepted
+[Fri Oct 17 12:27:00 2025] 127.0.0.1:51362 [200]: GET /ejemplo.php
+[Fri Oct 17 12:27:00 2025] 127.0.0.1:51362 Closing
+[Fri Oct 17 12:27:03 2025] 127.0.0.1:51372 Accepted
+[Fri Oct 17 12:27:03 2025] 127.0.0.1:51372 [200]: POST /saludar.php
+[Fri Oct 17 12:27:03 2025] 127.0.0.1:51372 Closing
+[Fri Oct 17 12:28:10 2025] 127.0.0.1:38256 Accepted
+[Fri Oct 17 12:28:10 2025] 127.0.0.1:38256 [200]: GET /ejemplo.php
+[Fri Oct 17 12:28:10 2025] 127.0.0.1:38256 Closing
+[Fri Oct 17 12:28:15 2025] 127.0.0.1:45212 Accepted
+[Fri Oct 17 12:28:15 2025] 127.0.0.1:45212 [200]: POST /saludar.php
+[Fri Oct 17 12:28:15 2025] 127.0.0.1:45212 Closing
+[Fri Oct 17 12:29:34 2025] 127.0.0.1:44888 Accepted
+[Fri Oct 17 12:29:34 2025] 127.0.0.1:44888 [200]: GET /ejemplo.php
+[Fri Oct 17 12:29:34 2025] 127.0.0.1:44888 Closing
+[Fri Oct 17 12:29:38 2025] 127.0.0.1:44900 Accepted
+[Fri Oct 17 12:29:38 2025] 127.0.0.1:44900 [200]: POST /saludar.php
+[Fri Oct 17 12:29:38 2025] 127.0.0.1:44900 Closing
+[Fri Oct 17 12:29:58 2025] 127.0.0.1:40278 Accepted
+[Fri Oct 17 12:29:58 2025] 127.0.0.1:40278 [200]: GET /ejemplo.php
+[Fri Oct 17 12:29:58 2025] 127.0.0.1:40278 Closing
+[Fri Oct 17 12:30:01 2025] 127.0.0.1:55778 Accepted
+[Fri Oct 17 12:30:01 2025] 127.0.0.1:55778 [200]: POST /saludar.php
+[Fri Oct 17 12:30:01 2025] 127.0.0.1:55778 Closing
+[Fri Oct 17 12:35:49 2025] 127.0.0.1:38654 Accepted
+[Fri Oct 17 12:35:49 2025] 127.0.0.1:38654 [200]: GET /ejemplo2.php
+[Fri Oct 17 12:35:49 2025] 127.0.0.1:38654 Closing
+[Fri Oct 17 12:36:18 2025] 127.0.0.1:36830 Accepted
+[Fri Oct 17 12:36:18 2025] 127.0.0.1:36830 [200]: GET /ejemplo2.php
+[Fri Oct 17 12:36:18 2025] 127.0.0.1:36830 Closing
+[Fri Oct 17 12:37:35 2025] 127.0.0.1:34938 Accepted
+[Fri Oct 17 12:37:35 2025] 127.0.0.1:34938 [200]: GET /ejemplo2.php
+[Fri Oct 17 12:37:35 2025] 127.0.0.1:34938 Closing
+[Fri Oct 17 12:38:02 2025] 127.0.0.1:36436 Accepted
+[Fri Oct 17 12:38:02 2025] 127.0.0.1:36436 [200]: GET /ejemplo2.php
+[Fri Oct 17 12:38:02 2025] 127.0.0.1:36436 Closing
+[Fri Oct 17 12:38:53 2025] 127.0.0.1:34770 Accepted
+[Fri Oct 17 12:38:53 2025] 127.0.0.1:34770 [200]: GET /ejemplo2.php
+[Fri Oct 17 12:38:53 2025] 127.0.0.1:34770 Closing
+[Fri Oct 17 12:38:59 2025] 127.0.0.1:34774 Accepted
+[Fri Oct 17 12:38:59 2025] 127.0.0.1:34774 [200]: POST /ejemplo2.php
+[Fri Oct 17 12:38:59 2025] 127.0.0.1:34774 Closing
+[Fri Oct 17 12:39:14 2025] 127.0.0.1:38080 Accepted
+[Fri Oct 17 12:39:14 2025] 127.0.0.1:38080 [200]: GET /ejemplo2.php
+[Fri Oct 17 12:39:14 2025] 127.0.0.1:38080 Closing
+[Fri Oct 17 12:40:34 2025] 127.0.0.1:48588 Accepted
+[Fri Oct 17 12:40:34 2025] PHP Warning:  Undefined array key "nombre" in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/ejemplo2.php on line 3
+[Fri Oct 17 12:40:34 2025] 127.0.0.1:48588 [200]: GET /ejemplo2.php
+[Fri Oct 17 12:40:34 2025] 127.0.0.1:48588 Closing
+[Fri Oct 17 12:40:42 2025] 127.0.0.1:54422 Accepted
+[Fri Oct 17 12:40:42 2025] PHP Warning:  Undefined array key "nombre" in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/ejemplo2.php on line 3
+[Fri Oct 17 12:40:42 2025] 127.0.0.1:54422 [200]: GET /ejemplo2.php
+[Fri Oct 17 12:40:42 2025] 127.0.0.1:54422 Closing
+[Fri Oct 17 12:41:15 2025] 127.0.0.1:57336 Accepted
+[Fri Oct 17 12:41:15 2025] PHP Warning:  Undefined array key "nombre" in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/ejemplo2.php on line 3
+[Fri Oct 17 12:41:15 2025] 127.0.0.1:57336 [200]: GET /ejemplo2.php
+[Fri Oct 17 12:41:15 2025] 127.0.0.1:57336 Closing
+[Fri Oct 17 12:41:36 2025] 127.0.0.1:44122 Accepted
+[Fri Oct 17 12:41:36 2025] PHP Warning:  Undefined array key "nombre" in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/ejemplo2.php on line 3
+[Fri Oct 17 12:41:36 2025] 127.0.0.1:44122 [200]: GET /ejemplo2.php
+[Fri Oct 17 12:41:36 2025] 127.0.0.1:44122 Closing
+[Fri Oct 17 12:41:41 2025] 127.0.0.1:39446 Accepted
+[Fri Oct 17 12:41:41 2025] 127.0.0.1:39446 [200]: POST /ejemplo2.php
+[Fri Oct 17 12:41:41 2025] 127.0.0.1:39446 Closing
+[Fri Oct 17 12:43:50 2025] 127.0.0.1:39936 Accepted
+[Fri Oct 17 12:43:50 2025] PHP Warning:  Undefined array key 0 in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/ejemplo2.php on line 3
+[Fri Oct 17 12:43:50 2025] 127.0.0.1:39936 [200]: POST /ejemplo2.php
+[Fri Oct 17 12:43:50 2025] 127.0.0.1:39936 Closing
+[Fri Oct 17 12:43:54 2025] 127.0.0.1:45574 Accepted
+[Fri Oct 17 12:43:54 2025] PHP Warning:  Undefined array key 0 in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/ejemplo2.php on line 3
+[Fri Oct 17 12:43:54 2025] 127.0.0.1:45574 [200]: POST /ejemplo2.php
+[Fri Oct 17 12:43:54 2025] 127.0.0.1:45574 Closing
+[Fri Oct 17 12:43:56 2025] 127.0.0.1:45588 Accepted
+[Fri Oct 17 12:43:56 2025] PHP Warning:  Undefined array key 0 in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/ejemplo2.php on line 3
+[Fri Oct 17 12:43:56 2025] 127.0.0.1:45588 [200]: POST /ejemplo2.php
+[Fri Oct 17 12:43:56 2025] 127.0.0.1:45588 Closing
+[Fri Oct 17 12:43:59 2025] 127.0.0.1:45590 Accepted
+[Fri Oct 17 12:43:59 2025] PHP Warning:  Undefined array key 0 in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/ejemplo2.php on line 3
+[Fri Oct 17 12:43:59 2025] 127.0.0.1:45590 [200]: POST /ejemplo2.php
+[Fri Oct 17 12:43:59 2025] 127.0.0.1:45590 Closing
+[Fri Oct 17 12:44:22 2025] 127.0.0.1:50904 Accepted
+[Fri Oct 17 12:44:22 2025] PHP Warning:  Undefined array key 0 in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/ejemplo2.php on line 3
+[Fri Oct 17 12:44:22 2025] 127.0.0.1:50904 [200]: POST /ejemplo2.php
+[Fri Oct 17 12:44:22 2025] 127.0.0.1:50904 Closing
+[Fri Oct 17 12:44:29 2025] 127.0.0.1:50916 Accepted
+[Fri Oct 17 12:44:29 2025] PHP Warning:  Undefined array key 0 in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/ejemplo2.php on line 3
+[Fri Oct 17 12:44:29 2025] 127.0.0.1:50916 [200]: POST /ejemplo2.php
+[Fri Oct 17 12:44:29 2025] 127.0.0.1:50916 Closing
+[Fri Oct 17 12:44:36 2025] 127.0.0.1:41350 Accepted
+[Fri Oct 17 12:44:36 2025] PHP Warning:  Undefined array key 0 in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/ejemplo2.php on line 3
+[Fri Oct 17 12:44:36 2025] 127.0.0.1:41350 [200]: GET /ejemplo2.php
+[Fri Oct 17 12:44:36 2025] 127.0.0.1:41350 Closing
+[Fri Oct 17 12:44:40 2025] 127.0.0.1:58646 Accepted
+[Fri Oct 17 12:44:40 2025] PHP Warning:  Undefined array key 0 in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/ejemplo2.php on line 3
+[Fri Oct 17 12:44:40 2025] 127.0.0.1:58646 [200]: POST /ejemplo2.php
+[Fri Oct 17 12:44:40 2025] 127.0.0.1:58646 Closing
+[Fri Oct 17 12:45:03 2025] 127.0.0.1:36832 Accepted
+[Fri Oct 17 12:45:03 2025] 127.0.0.1:36832 [200]: POST /ejemplo2.php
+[Fri Oct 17 12:45:03 2025] 127.0.0.1:36832 Closing
+[Fri Oct 17 12:45:07 2025] 127.0.0.1:36836 Accepted
+[Fri Oct 17 12:45:07 2025] 127.0.0.1:36836 [200]: POST /ejemplo2.php
+[Fri Oct 17 12:45:07 2025] 127.0.0.1:36836 Closing
+[Fri Oct 17 12:45:17 2025] 127.0.0.1:33430 Accepted
+[Fri Oct 17 12:45:17 2025] 127.0.0.1:33430 [200]: GET /ejemplo2.php
+[Fri Oct 17 12:45:17 2025] 127.0.0.1:33430 Closing
+[Fri Oct 17 12:45:21 2025] 127.0.0.1:60028 Accepted
+[Fri Oct 17 12:45:21 2025] 127.0.0.1:60028 [200]: POST /ejemplo2.php
+[Fri Oct 17 12:45:21 2025] 127.0.0.1:60028 Closing
+[Fri Oct 17 12:50:47 2025] 127.0.0.1:45068 Accepted
+[Fri Oct 17 12:50:47 2025] 127.0.0.1:45068 [200]: GET /2.1.php
+[Fri Oct 17 12:50:47 2025] 127.0.0.1:45068 Closing
+[Fri Oct 17 12:55:19 2025] 127.0.0.1:33302 Accepted
+[Fri Oct 17 12:55:19 2025] 127.0.0.1:33302 [200]: GET /2.1.php
+[Fri Oct 17 12:55:19 2025] 127.0.0.1:33302 Closing
+[Fri Oct 17 12:55:36 2025] 127.0.0.1:48386 Accepted
+[Fri Oct 17 12:55:36 2025] 127.0.0.1:48386 [200]: GET /2.1.php
+[Fri Oct 17 12:55:36 2025] 127.0.0.1:48386 Closing
+[Fri Oct 17 12:55:39 2025] 127.0.0.1:48400 Accepted
+[Fri Oct 17 12:55:39 2025] 127.0.0.1:48400 [200]: POST /2.1.php
+[Fri Oct 17 12:55:39 2025] 127.0.0.1:48400 Closing
+[Fri Oct 17 12:55:48 2025] 127.0.0.1:58496 Accepted
+[Fri Oct 17 12:55:48 2025] 127.0.0.1:58496 [200]: GET /2.1.php
+[Fri Oct 17 12:55:48 2025] 127.0.0.1:58496 Closing
+[Fri Oct 17 12:55:48 2025] 127.0.0.1:58508 Accepted
+[Fri Oct 17 12:55:48 2025] 127.0.0.1:58508 [200]: GET /2.1.php
+[Fri Oct 17 12:55:48 2025] 127.0.0.1:58508 Closing
+[Fri Oct 17 12:56:08 2025] 127.0.0.1:42818 Accepted
+[Fri Oct 17 12:56:08 2025] 127.0.0.1:42818 [200]: GET /2.1.php
+[Fri Oct 17 12:56:08 2025] 127.0.0.1:42818 Closing
+[Fri Oct 17 12:56:47 2025] 127.0.0.1:46334 Accepted
+[Fri Oct 17 12:56:47 2025] 127.0.0.1:46334 [200]: GET /2.1.php
+[Fri Oct 17 12:56:47 2025] 127.0.0.1:46334 Closing
+[Fri Oct 17 12:56:48 2025] 127.0.0.1:46336 Accepted
+[Fri Oct 17 12:56:48 2025] 127.0.0.1:46336 [200]: GET /2.1.php
+[Fri Oct 17 12:56:48 2025] 127.0.0.1:46336 Closing
+[Fri Oct 17 12:57:00 2025] 127.0.0.1:60498 Accepted
+[Fri Oct 17 12:57:00 2025] PHP Warning:  Undefined array key "numero" in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/2.1.php on line 6
+[Fri Oct 17 12:57:00 2025] 127.0.0.1:60498 [200]: POST /2.1.php
+[Fri Oct 17 12:57:00 2025] 127.0.0.1:60498 Closing
+[Fri Oct 17 12:58:46 2025] 127.0.0.1:42696 Accepted
+[Fri Oct 17 12:58:46 2025] 127.0.0.1:42696 [200]: POST /2.1.php
+[Fri Oct 17 12:58:46 2025] 127.0.0.1:42696 Closing
+[Fri Oct 17 12:58:49 2025] 127.0.0.1:42702 Accepted
+[Fri Oct 17 12:58:49 2025] 127.0.0.1:42702 [200]: POST /2.1.php
+[Fri Oct 17 12:58:49 2025] 127.0.0.1:42702 Closing
+[Fri Oct 17 12:59:24 2025] 127.0.0.1:54430 Accepted
+[Fri Oct 17 12:59:24 2025] 127.0.0.1:54430 [200]: POST /2.1.php
+[Fri Oct 17 12:59:24 2025] 127.0.0.1:54430 Closing
+[Fri Oct 17 13:00:37 2025] 127.0.0.1:43836 Accepted
+[Fri Oct 17 13:00:37 2025] 127.0.0.1:43836 [200]: POST /2.1.php
+[Fri Oct 17 13:00:37 2025] 127.0.0.1:43836 Closing
+[Fri Oct 17 13:00:42 2025] 127.0.0.1:41040 Accepted
+[Fri Oct 17 13:00:42 2025] 127.0.0.1:41040 [200]: POST /2.1.php
+[Fri Oct 17 13:00:42 2025] 127.0.0.1:41040 Closing
+[Fri Oct 17 13:00:47 2025] 127.0.0.1:41046 Accepted
+[Fri Oct 17 13:00:47 2025] 127.0.0.1:41046 [200]: POST /2.1.php
+[Fri Oct 17 13:00:47 2025] 127.0.0.1:41046 Closing
+[Fri Oct 17 13:00:52 2025] 127.0.0.1:60062 Accepted
+[Fri Oct 17 13:00:52 2025] 127.0.0.1:60062 [200]: POST /2.1.php
+[Fri Oct 17 13:00:52 2025] 127.0.0.1:60062 Closing
+[Fri Oct 17 13:01:28 2025] 127.0.0.1:58900 Accepted
+[Fri Oct 17 13:01:28 2025] 127.0.0.1:58900 [200]: GET /2.1.php
+[Fri Oct 17 13:01:28 2025] 127.0.0.1:58900 Closing
+[Fri Oct 17 13:01:49 2025] 127.0.0.1:36886 Accepted
+[Fri Oct 17 13:01:49 2025] 127.0.0.1:36886 [200]: POST /2.1.php
+[Fri Oct 17 13:01:49 2025] 127.0.0.1:36886 Closing
+[Fri Oct 17 13:01:54 2025] 127.0.0.1:51158 Accepted
+[Fri Oct 17 13:01:54 2025] 127.0.0.1:51158 [200]: POST /2.1.php
+[Fri Oct 17 13:01:54 2025] 127.0.0.1:51158 Closing
+[Fri Oct 17 13:01:57 2025] 127.0.0.1:51172 Accepted
+[Fri Oct 17 13:01:57 2025] 127.0.0.1:51172 [200]: POST /2.1.php
+[Fri Oct 17 13:01:57 2025] 127.0.0.1:51172 Closing
+[Fri Oct 17 13:05:07 2025] 127.0.0.1:57640 Accepted
+[Fri Oct 17 13:05:07 2025] 127.0.0.1:57640 [200]: GET /2.8.php
+[Fri Oct 17 13:05:07 2025] 127.0.0.1:57640 Closing
+[Fri Oct 17 13:05:44 2025] 127.0.0.1:47172 Accepted
+[Fri Oct 17 13:05:44 2025] 127.0.0.1:47172 [200]: GET /2.8.php
+[Fri Oct 17 13:05:44 2025] 127.0.0.1:47172 Closing
+[Fri Oct 17 13:06:08 2025] 127.0.0.1:37482 Accepted
+[Fri Oct 17 13:06:08 2025] 127.0.0.1:37482 [200]: GET /2.8.php
+[Fri Oct 17 13:06:08 2025] 127.0.0.1:37482 Closing
+[Fri Oct 17 13:06:36 2025] 127.0.0.1:58392 Accepted
+[Fri Oct 17 13:06:36 2025] 127.0.0.1:58392 [200]: GET /2.8.php
+[Fri Oct 17 13:06:36 2025] 127.0.0.1:58392 Closing
+[Fri Oct 17 13:06:37 2025] 127.0.0.1:58402 Accepted
+[Fri Oct 17 13:06:37 2025] 127.0.0.1:58402 [200]: GET /2.8.php
+[Fri Oct 17 13:06:37 2025] 127.0.0.1:58402 Closing
+[Fri Oct 17 13:07:01 2025] 127.0.0.1:41570 Accepted
+[Fri Oct 17 13:07:01 2025] 127.0.0.1:41570 [200]: GET /2.8.php
+[Fri Oct 17 13:07:01 2025] 127.0.0.1:41570 Closing
+[Fri Oct 17 13:07:01 2025] 127.0.0.1:41578 Accepted
+[Fri Oct 17 13:07:01 2025] 127.0.0.1:41578 [200]: GET /2.8.php
+[Fri Oct 17 13:07:01 2025] 127.0.0.1:41578 Closing
+[Fri Oct 17 13:07:01 2025] 127.0.0.1:41588 Accepted
+[Fri Oct 17 13:07:01 2025] 127.0.0.1:41588 [200]: GET /2.8.php
+[Fri Oct 17 13:07:01 2025] 127.0.0.1:41588 Closing
+[Fri Oct 17 13:07:02 2025] 127.0.0.1:41596 Accepted
+[Fri Oct 17 13:07:02 2025] 127.0.0.1:41596 [200]: GET /2.8.php
+[Fri Oct 17 13:07:02 2025] 127.0.0.1:41596 Closing
+[Fri Oct 17 13:07:02 2025] 127.0.0.1:41606 Accepted
+[Fri Oct 17 13:07:02 2025] 127.0.0.1:41606 [200]: GET /2.8.php
+[Fri Oct 17 13:07:02 2025] 127.0.0.1:41606 Closing
+[Fri Oct 17 13:07:02 2025] 127.0.0.1:41618 Accepted
+[Fri Oct 17 13:07:02 2025] 127.0.0.1:41618 [200]: GET /2.8.php
+[Fri Oct 17 13:07:02 2025] 127.0.0.1:41618 Closing
+[Fri Oct 17 13:07:02 2025] 127.0.0.1:41622 Accepted
+[Fri Oct 17 13:07:02 2025] 127.0.0.1:41622 [200]: GET /2.8.php
+[Fri Oct 17 13:07:02 2025] 127.0.0.1:41622 Closing
+[Fri Oct 17 13:07:03 2025] 127.0.0.1:41636 Accepted
+[Fri Oct 17 13:07:03 2025] 127.0.0.1:41636 [200]: GET /2.8.php
+[Fri Oct 17 13:07:03 2025] 127.0.0.1:41636 Closing
+[Fri Oct 17 13:07:26 2025] 127.0.0.1:59760 Accepted
+[Fri Oct 17 13:07:26 2025] 127.0.0.1:59760 [200]: GET /2.8.php
+[Fri Oct 17 13:07:26 2025] 127.0.0.1:59760 Closing
+[Fri Oct 17 13:09:12 2025] 127.0.0.1:50670 Accepted
+[Fri Oct 17 13:09:12 2025] 127.0.0.1:50670 [200]: GET /2.8.php
+[Fri Oct 17 13:09:12 2025] 127.0.0.1:50670 Closing
+[Fri Oct 17 13:09:23 2025] 127.0.0.1:53376 Accepted
+[Fri Oct 17 13:09:23 2025] 127.0.0.1:53376 [200]: GET /2.8.php
+[Fri Oct 17 13:09:23 2025] 127.0.0.1:53376 Closing
+[Fri Oct 17 13:11:38 2025] 127.0.0.1:46900 Accepted
+[Fri Oct 17 13:11:38 2025] 127.0.0.1:46900 [200]: GET /2.8.php
+[Fri Oct 17 13:11:38 2025] 127.0.0.1:46900 Closing
+[Fri Oct 17 13:11:40 2025] 127.0.0.1:46906 Accepted
+[Fri Oct 17 13:11:40 2025] 127.0.0.1:46906 [200]: POST /2.8.php
+[Fri Oct 17 13:11:40 2025] 127.0.0.1:46906 Closing
+[Fri Oct 17 13:12:26 2025] 127.0.0.1:33782 Accepted
+[Fri Oct 17 13:12:26 2025] PHP Parse error:  syntax error, unexpected identifier "es", expecting "," or ";" in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/2.8.php on line 13
+[Fri Oct 17 13:12:26 2025] 127.0.0.1:33782 [500]: POST /2.8.php - syntax error, unexpected identifier "es", expecting "," or ";" in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/2.8.php on line 13
+[Fri Oct 17 13:12:26 2025] 127.0.0.1:33782 Closing
+[Fri Oct 17 13:12:29 2025] 127.0.0.1:33792 Accepted
+[Fri Oct 17 13:12:29 2025] PHP Parse error:  syntax error, unexpected identifier "es", expecting "," or ";" in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/2.8.php on line 13
+[Fri Oct 17 13:12:29 2025] 127.0.0.1:33792 [500]: POST /2.8.php - syntax error, unexpected identifier "es", expecting "," or ";" in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/2.8.php on line 13
+[Fri Oct 17 13:12:29 2025] 127.0.0.1:33792 Closing
+[Fri Oct 17 13:12:31 2025] 127.0.0.1:43812 Accepted
+[Fri Oct 17 13:12:31 2025] PHP Parse error:  syntax error, unexpected identifier "es", expecting "," or ";" in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/2.8.php on line 13
+[Fri Oct 17 13:12:31 2025] 127.0.0.1:43812 [500]: POST /2.8.php - syntax error, unexpected identifier "es", expecting "," or ";" in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/2.8.php on line 13
+[Fri Oct 17 13:12:31 2025] 127.0.0.1:43812 Closing
+[Fri Oct 17 13:13:25 2025] 127.0.0.1:53172 Accepted
+[Fri Oct 17 13:13:25 2025] 127.0.0.1:53172 [200]: POST /2.8.php
+[Fri Oct 17 13:13:25 2025] 127.0.0.1:53172 Closing
+[Fri Oct 17 13:13:30 2025] 127.0.0.1:53188 Accepted
+[Fri Oct 17 13:13:30 2025] 127.0.0.1:53188 [200]: POST /2.8.php
+[Fri Oct 17 13:13:30 2025] 127.0.0.1:53188 Closing
+[Fri Oct 17 13:13:31 2025] 127.0.0.1:52832 Accepted
+[Fri Oct 17 13:13:31 2025] 127.0.0.1:52832 [200]: POST /2.8.php
+[Fri Oct 17 13:13:31 2025] 127.0.0.1:52832 Closing
+[Fri Oct 17 13:13:32 2025] 127.0.0.1:52840 Accepted
+[Fri Oct 17 13:13:32 2025] 127.0.0.1:52840 [200]: POST /2.8.php
+[Fri Oct 17 13:13:32 2025] 127.0.0.1:52840 Closing
+[Fri Oct 17 13:13:33 2025] 127.0.0.1:52854 Accepted
+[Fri Oct 17 13:13:33 2025] 127.0.0.1:52854 [200]: POST /2.8.php
+[Fri Oct 17 13:13:33 2025] 127.0.0.1:52854 Closing
+[Fri Oct 17 13:13:34 2025] 127.0.0.1:52856 Accepted
+[Fri Oct 17 13:13:34 2025] 127.0.0.1:52856 [200]: POST /2.8.php
+[Fri Oct 17 13:13:34 2025] 127.0.0.1:52856 Closing
+[Fri Oct 17 13:13:35 2025] 127.0.0.1:52868 Accepted
+[Fri Oct 17 13:13:35 2025] 127.0.0.1:52868 [200]: POST /2.8.php
+[Fri Oct 17 13:13:35 2025] 127.0.0.1:52868 Closing
+[Fri Oct 17 13:13:36 2025] 127.0.0.1:52882 Accepted
+[Fri Oct 17 13:13:36 2025] 127.0.0.1:52882 [200]: POST /2.8.php
+[Fri Oct 17 13:13:36 2025] 127.0.0.1:52882 Closing
+[Fri Oct 17 13:13:36 2025] 127.0.0.1:52888 Accepted
+[Fri Oct 17 13:13:36 2025] 127.0.0.1:52888 [200]: POST /2.8.php
+[Fri Oct 17 13:13:36 2025] 127.0.0.1:52888 Closing
+[Fri Oct 17 13:13:37 2025] 127.0.0.1:52904 Accepted
+[Fri Oct 17 13:13:37 2025] 127.0.0.1:52904 [200]: POST /2.8.php
+[Fri Oct 17 13:13:37 2025] 127.0.0.1:52904 Closing
+[Fri Oct 17 13:13:37 2025] 127.0.0.1:52910 Accepted
+[Fri Oct 17 13:13:37 2025] 127.0.0.1:52910 [200]: POST /2.8.php
+[Fri Oct 17 13:13:37 2025] 127.0.0.1:52910 Closing
+[Fri Oct 17 13:14:53 2025] 127.0.0.1:49518 Accepted
+[Fri Oct 17 13:14:53 2025] PHP Warning:  Undefined variable $resultado in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/2.8.php on line 8
+[Fri Oct 17 13:14:53 2025] 127.0.0.1:49518 [200]: POST /2.8.php
+[Fri Oct 17 13:14:53 2025] 127.0.0.1:49518 Closing
+[Fri Oct 17 13:15:03 2025] 127.0.0.1:34540 Accepted
+[Fri Oct 17 13:15:03 2025] PHP Warning:  Undefined variable $resultado in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/2.8.php on line 8
+[Fri Oct 17 13:15:03 2025] 127.0.0.1:34540 [200]: POST /2.8.php
+[Fri Oct 17 13:15:03 2025] 127.0.0.1:34540 Closing
+[Fri Oct 17 13:15:12 2025] 127.0.0.1:44398 Accepted
+[Fri Oct 17 13:15:12 2025] PHP Warning:  Undefined variable $resultado in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/2.8.php on line 8
+[Fri Oct 17 13:15:12 2025] 127.0.0.1:44398 [200]: POST /2.8.php
+[Fri Oct 17 13:15:12 2025] 127.0.0.1:44398 Closing
+[Fri Oct 17 13:17:00 2025] 127.0.0.1:33822 Accepted
+[Fri Oct 17 13:17:00 2025] PHP Warning:  Undefined variable $resultado in /home/ssd_asir2/repositorios/IAW_new/ejemplos1/2.8.php on line 8
+[Fri Oct 17 13:17:00 2025] 127.0.0.1:33822 [200]: POST /2.8.php
+[Fri Oct 17 13:17:00 2025] 127.0.0.1:33822 Closing
+[Fri Oct 17 13:34:37 2025] 127.0.0.1:43078 Accepted
+[Fri Oct 17 13:34:37 2025] 127.0.0.1:43078 [200]: GET /1.11.php?gervasio=20&&facundina=20
+[Fri Oct 17 13:34:37 2025] 127.0.0.1:43078 Closing
+[Fri Oct 17 13:36:09 2025] 127.0.0.1:46324 Accepted
+[Fri Oct 17 13:36:09 2025] 127.0.0.1:46324 [200]: GET /1.11.php?gervasio=20&&facundina=17
+[Fri Oct 17 13:36:09 2025] 127.0.0.1:46324 Closing
+[Fri Oct 17 13:37:33 2025] 127.0.0.1:58364 Accepted
+[Fri Oct 17 13:37:33 2025] 127.0.0.1:58364 [200]: GET /1.11.php?gervasio=20&&facundina=20
+[Fri Oct 17 13:37:33 2025] 127.0.0.1:58364 Closing
+[Fri Oct 17 13:37:44 2025] 127.0.0.1:48246 Accepted
+[Fri Oct 17 13:37:44 2025] 127.0.0.1:48246 [200]: GET /1.11.php?gervasio=15&&facundina=20
+[Fri Oct 17 13:37:44 2025] 127.0.0.1:48246 Closing
+[Fri Oct 17 13:37:52 2025] 127.0.0.1:56134 Accepted
+[Fri Oct 17 13:37:52 2025] 127.0.0.1:56134 [200]: GET /1.11.php?gervasio=15&&facundina=15
+[Fri Oct 17 13:37:52 2025] 127.0.0.1:56134 Closing
