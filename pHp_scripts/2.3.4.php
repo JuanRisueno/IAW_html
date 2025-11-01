@@ -4,7 +4,7 @@
     if($_SERVER["REQUEST_METHOD"] == 'POST'){
         //var_dump($_POST); //Cuando mandamos algo, nos informa que se está mandando
         $tabla = $_POST['tabla'];
-        $salida = tabla($tabla);
+        $salida = tablaMultiplicar($tabla);
     }
 ?>
 
