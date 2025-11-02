@@ -38,15 +38,15 @@ satisfacción."-->
     </form>
 
     <?php
-    $nombre = $_POST['nombre'];
-    if(isset($_POST['enviar'])){
-        if(isset($_POST['satisfaccion'])){
-            $val = $_POST['satisfaccion'];
-            echo "<p>Hola $nombre, gracias por tu valoración: $val</p>";
-        }else{
-            echo "<p>Hola $nombre. Por favor elige un nivel de satisafacción</p>";
+        $nombre = $_POST['nombre'];
+        if(isset($_POST['enviar'])){
+            if(isset($_POST['satisfaccion'])){
+                $val = $_POST['satisfaccion'];
+                echo "<p>Hola $nombre, gracias por tu valoración: $val</p>";
+            }else{
+                echo "<p>Hola $nombre. Por favor elige un nivel de satisafacción</p>";
+            }
         }
-    }
     ?>
 </body>
 </html>
