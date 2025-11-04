@@ -16,13 +16,14 @@
     <title>Ejercicio 3.4</title>
 </head>
 <body>
+    <h1>Ejercicio 3.4</h1>
+    <h2>Tabla de multiplicar</h2>
     <form action="" method="post">
         <label for="tabla">
             Tabla:
             <input type="text" name="tabla" id="tabla">
         </label>
-        <br>
-        <input type="submit" value="Mostrar">
+        <p><input type="submit" value="Mostrar"></p>
     </form>
     <?php
         if(isset($salida)) echo $salida;

@@ -21,10 +21,12 @@ function tablaMultiplicar(int $tabla): string
     $resultado = "<ul>";
 
     for($i=0;$i<=10;$i++){
-        $resultado .= "<li>$tabla x $i = ".($tabla*$i)."</li>";
+        #$resultado .= "<li>$tabla x $i = ".($tabla*$i)."</li>"; Con concatenacion
+        $mul = $i * $tabla;
+        $resultado .= "<li>$tabla x $i = $mul";
     }
 
-    $resultado .= "<ul>";
+    #$resultado .= "<ul>"; #yo creo que esta lína sobra
 
     return $resultado;
 }
