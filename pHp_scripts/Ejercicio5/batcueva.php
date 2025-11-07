@@ -1,9 +1,7 @@
 <?php
-    session_start();
-    
-    if (!isset($_SESSION['user'])){
-        header("Location:5.2.php");
-    }
+    require_once 'iniciar_sesion.php';
+    require_once 'no_logueado.php';
+    require_once 'inactividad.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -14,7 +12,8 @@
 </head>
 <body>
     <h1>Bienvenido <?=$_SESSION['user'] ?>. Archivos de la Liga de la Justicia cargados.</h1>
-    <p><a href="5.1.php">Buscar Pistas</p>
-    <p><a href="5.2.3.php">Salir de la Batcueva</a></p>
+    <p><a href="pistas.php">Buscar Pistas</p>
+    <p><a href="batmovil.php">Equipar Batmóvil</p>
+    <p><a href="salir.php">Salir de la Batcueva</a></p>
 </body>
 </html>

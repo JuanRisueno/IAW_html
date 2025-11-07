@@ -25,6 +25,7 @@ usuario de vuelta a login.php con un mensaje de "Conexión cerrada".
 login.php-->
 
 <?php
+    require_once 'iniciar_sesion.php';
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $user = $_POST['user'];
         $pass = $_POST['pass'];
@@ -33,9 +34,9 @@ login.php-->
         if (($user == "Batman" || $user == "Alfred") && $pass == "1234") {
             //Login Correcto
             //Crear la sesión
-            session_start();
             $_SESSION['user'] = $user;
-            header("Location:5.2.2.php");
+            $_SESSION['ultimo_movimiento'] = time();
+            header("Location:batcueva.php");
 
         }else{
             //Login Incorrecto

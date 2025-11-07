@@ -20,14 +20,21 @@ primera pista."
 🔑 Conceptos Clave: session_start(), isset(), leer/escribir en $_SESSION.-->
 
 <?php
-    session_start();
+    
 
-    if(isset($_SESSION['num_pistas'])){
+    /*if (!isset($_SESSION['user'])){
+        header("Location:login.php");
+    }else if(isset($_SESSION['num_pistas'])){
         $_SESSION['num_pistas'] += 1;
     }else{
         $_SESSION['num_pistas'] = 1;
-    }
-
+    }*/
+    
+    require_once 'iniciar_sesion.php';
+    require_once 'no_logueado.php';
+    require_once 'inactividad.php';
+        
+    $_SESSION['num_pistas'] = ($_SESSION['num_pistas'] ?? 0) + 1;
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +54,7 @@ primera pista."
         echo "<p>Sigues investigando, has encontrado {$_SESSION['num_pistas']} pistas</p>";
     }
     ?>
-    <p><a href="5.1.php">Encontrar Pistas</a></p>
+    <p><a href="pistas.php">Encontrar Pistas</a></p>
     
 </body>
 </html>
