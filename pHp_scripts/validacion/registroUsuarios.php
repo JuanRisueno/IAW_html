@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     <h1>Registro de Usuarios</h1>
     <form action="" method="post">
         <p><input type="text" id="nombre" name="nombre" placeholder="Nombre" value="<?php echo htmlspecialchars($nombre) ?? ''; ?>"/></p>
-        <?php echo $errores['nombre'] ?? ''?>
+        <?php echo $errores['nombre'] ?? ''?> <!-- Sive para mostrar los errores-->
         <p><input type="text" id="email" name="email" placeholder="Correo Electrónico" value="<?php echo htmlspecialchars($email) ?? ''; ?>"/></p>
         <?php echo $errores['email'] ?? ''?>
         <p><input type="text" id="password" name="password" placeholder="Contraseña" value="<?php echo htmlspecialchars($password) ?? ''; ?>"/></p>
