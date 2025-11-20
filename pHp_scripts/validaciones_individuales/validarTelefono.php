@@ -12,7 +12,8 @@
         }
 
         if(empty($errores)){
-            echo "Formulario enviado";
+            $tel_bien=$telefono;
+            echo "Formulario enviado. Teléfono: $tel_bien";
         }
     }
 ?>

@@ -10,8 +10,8 @@
         }
 
         if(empty($errores)){
-            echo "El formulario se ha enviado fatisfactoriamente.";
             $nombre_bien=$nombre;
+            echo "El formulario se ha enviado fatisfactoriamente. Nombre: $nombre_bien";
         }
     }
 ?>

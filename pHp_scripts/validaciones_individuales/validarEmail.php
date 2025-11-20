@@ -12,8 +12,8 @@
         }
 
         if(empty($errores)){
-            echo "Formulario enviado correctamente";
             $email_valido=$email;
+            echo "Formulario enviado correctamente. email: $email_valido";
         }
     }
 ?>

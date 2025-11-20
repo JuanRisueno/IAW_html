@@ -13,7 +13,7 @@
 
         if(empty($errores)){
             $edad_bien=$edad;
-            echo "Se ha enviado bien el formulario.";
+            echo "Se ha enviado bien el formulario. Edad: $edad_bien";
         }
     }
 ?>

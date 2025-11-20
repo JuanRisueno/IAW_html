@@ -12,7 +12,8 @@
         }
 
         if(empty($errores)){
-            echo "Formulario mandado con éxito";
+            $cp_bien=$cp;
+            echo "Formulario mandado con éxito. Código Postal: $cp_bien";
         }
     }
 ?>

@@ -12,7 +12,8 @@
         }
 
         if(empty($errores)){
-            echo "Se ha enviado bien el formulario";
+            $precio_bien=$precio;
+            echo "Se ha enviado bien el formulario. Precio: $precio_bien";
         }
     }
 ?>

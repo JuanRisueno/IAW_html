@@ -35,6 +35,8 @@ Cuando los datos sean válidos, mostrar el resumen de la encuesta.-->
         $nombre=trim($_POST['nombre']);
         $contacto=$_POST['contacto'];
         $email=filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
+        $telefono=trim($_POST['telefono']);
+
 
         //Nombre
         if(empty($nombre)){
@@ -64,11 +66,20 @@ Cuando los datos sean válidos, mostrar el resumen de la encuesta.-->
             $email_bien=$email;
         }
 
+        //Teléfono
+        if($contacto == 'telefono' && empty($telefono)){
+            $errores['telefono'] = "Debes introducir un teléfono";
+        }elseif (!preg_match("/^6\d{8}$/",$telefono)){
+            $errores['telefono'] = "El teléfono debe tener 9 dígitos y empezar por 6";
+        }else{
+            $tel_bien=$telefono;
+        }
+
         if(empty($errores)){
             echo "Nombre: $nombre_bien <br/>";
             echo "Contacto: $contacto_bien <br/>";
             echo "email: $email_bien <br/>";
-
+            echo "Teléfono: $tel_bien <br/>";
         }
     }
 ?>
@@ -85,7 +96,7 @@ Cuando los datos sean válidos, mostrar el resumen de la encuesta.-->
     <form action="" method="POST">
         <p>
             Nombre Completo: 
-            <input type="text" placeholder="Nombre Completo" name="nombre" value="<?php echo htmlspecialchars($nombre_bien ?? '')?>"></p>
+            <input type="text" placeholder="Nombre Completo" name="nombre" value="<?php echo htmlspecialchars($nombre_bien) ?? ''?>"></p>
             <?php echo $errores['nombre'] ?? ''?> <!-- Sive para mostrar los errores-->
         <p>
             <label for="metodoContacto">Método de contacto preferido:</label>
@@ -99,11 +110,12 @@ Cuando los datos sean válidos, mostrar el resumen de la encuesta.-->
         </p>
         <p>
             <label for="email">Correo Electrónico:</label>
-                <input type="email" name="email" placeholder="Correo Electrónico" value="<?php echo htmlspecialchars($email_bien ?? '')?>"></p>
+                <input type="email" name="email" placeholder="Correo Electrónico" value="<?php echo htmlspecialchars($email_bien) ?? ''?>"></p>
             <?php echo $errores['email'] ?? ''?> <!-- Sive para mostrar los errores-->
         <p>
             <label for="telefono">Teléfono:</label>
-                <input type="text" placeholder="Teléfono"></p>
+                <input type="text" placeholder="Teléfono" value="<?php echo htmlspecialchars($telefono) ?? '' ?>"></p>
+                <?php echo $errores['telefono'] ?? '' ?>
         <p>
             <label for="nivelSatisfaccion">Nivel de Satisfacción:</label><br>
                 <input type="radio" id="muySatisfecho" name="nivelSatisfaccion" value="muySatisfecho">
