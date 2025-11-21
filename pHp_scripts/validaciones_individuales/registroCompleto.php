@@ -73,11 +73,11 @@
 
         //SinErrores
         if(empty($errores)){
-            echo "Nombre: $nombreBien";
-            echo "Edad: $edadBien";
-            echo "Código Postal: $cpBien";
-            echo "Teléfono: $telefonoBien";
-            echo "eMail: $emailBien";
+            echo "Nombre: ".htmlspecialchars($nombreBien)." - ";
+            echo "Edad: ".htmlspecialchars($edadBien)." - ";
+            echo "Código Postal: ".htmlspecialchars($cpBien)." - ";
+            echo "Teléfono: ".htmlspecialchars($telefonoBien)." - ";
+            echo "eMail: ".htmlspecialchars($emailBien).".";
         }
 
     }
@@ -94,7 +94,7 @@
     <h1>Vamos a completar un registro completo</h1>
     <form method="POST" action="">
         <label for="nombre">Nombre
-            <input type="text" name="nombre" placeholder="Nombre" value="<?php echo htmlspecialchars($nombre) ?? '' ?>">
+            <input type="text" name="nombre" placeholder="Nombre" value="<?php echo htmlspecialchars($nombre ?? '')?>">
             <?php echo $errores['nombre'] ?? '' ?>
         </label>
         <br/>
@@ -104,22 +104,22 @@
         </label>
         <br/>
         <label for="edad">Edad
-            <input type="text" name="edad" placeholder="Edad" value="<?= htmlspecialchars($edad) ?? ''?>"> <!--Otra forma de hacerlo-->
+            <input type="text" name="edad" placeholder="Edad" value="<?= htmlspecialchars($edad ?? '')?>"> <!--Otra forma de hacerlo-->
             <?= $errores['edad'] ?? '' ?> <!--Otra forma de hacerlo-->
         </label>
         <br/>
         <label for="cp">Código Postal
-            <input type="text" name="cp" placeholder="Código Postal" value="<?php echo htmlspecialchars($cp) ?? '' ?>">
+            <input type="text" name="cp" placeholder="Código Postal" value="<?php echo htmlspecialchars($cp ?? '')?>">
             <?php echo $errores['cp'] ?? '' ?>
         </label>
         <br/>
         <label for="telefono">Teléfono
-            <input type="text" name="telefono" placeholder="Teléfono" value="<?= htmlspecialchars($telefono) ?? '' ?>">
+            <input type="text" name="telefono" placeholder="Teléfono" value="<?= htmlspecialchars($telefono ?? '')?>">
             <?= $errores['telefono'] ?? '' ?>
         </label>
         <br/>
         <label for="email">email
-            <input type="email" name="email" placeholder="eMail" value="<?php echo htmlspecialchars($email) ?? '' ?>">
+            <input type="email" name="email" placeholder="eMail" value="<?php echo htmlspecialchars($email ?? '')?>">
             <?= $errores['email'] ?? '' ?>
         </label>
         <p><input type="submit" value="Enviar"></p>

@@ -36,7 +36,8 @@ Cuando los datos sean válidos, mostrar el resumen de la encuesta.-->
         $contacto=$_POST['contacto'];
         $email=filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
         $telefono=trim($_POST['telefono']);
-
+        $nivelSatisfacion=$_POST['nivelSatisfaccion'] ?? '';
+        $mejorar=$_POST['mejoras'] ?? [];
 
         //Nombre
         if(empty($nombre)){
@@ -60,7 +61,7 @@ Cuando los datos sean válidos, mostrar el resumen de la encuesta.-->
         //email
         if($contacto == 'correo' && empty($email)){
             $errores['email'] = "Debes introducir un correo electrónico.";
-        }elseif(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+        }elseif(!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) === false){
             $errores['email'] = "Correo no válido";
         }else{
             $email_bien=$email;
@@ -69,17 +70,42 @@ Cuando los datos sean válidos, mostrar el resumen de la encuesta.-->
         //Teléfono
         if($contacto == 'telefono' && empty($telefono)){
             $errores['telefono'] = "Debes introducir un teléfono";
-        }elseif (!preg_match("/^6\d{8}$/",$telefono)){
-            $errores['telefono'] = "El teléfono debe tener 9 dígitos y empezar por 6";
+        }elseif (!empty($telefono) && !preg_match("/^[6-9]\d{8}$/",$telefono)){
+            $errores['telefono'] = "El teléfono debe tener 9 dígitos y empezar por 6, 7, 8 o 9";
         }else{
             $tel_bien=$telefono;
         }
 
+        //Nivel de Satisfacción - Radio
+        $valoresSatisfaccion=['muySatisfecho','satisfecho','neutral','insatisfecho','muyInsatisfecho'];
+        if(!isset($_POST['nivelSatisfaccion'])){
+            $errores['nivelSatisfaccion'] = "Debes seleccionar uno";
+        }elseif(!in_array($nivelSatisfacion,$valoresSatisfaccion)){
+            $errores['nivelSatisfaccion'] = "Opción no válida";
+        }else{
+            $nivelSatisfacion_bien = $nivelSatisfacion;
+        }
+
+        //Checkbox
+        $mejorarValoresValidos=['atencionCliente','tiempoEspera','calidadProducto','precio','experienciaWeb'];
+        if(count($mejorar) > 3){
+            $errores['mejoras'] = "Debes seleccionar al menos 3 opciones" ; 
+        }elseif(!empty(array_diff($mejorar,$mejorarValoresValidos))){
+            $errores['mejoras'] = "Hay un valor no válido." ; 
+        }else{
+            $mejorar_bien=$mejorar;
+        }
+
+        //Sin Errores
         if(empty($errores)){
-            echo "Nombre: $nombre_bien <br/>";
-            echo "Contacto: $contacto_bien <br/>";
-            echo "email: $email_bien <br/>";
-            echo "Teléfono: $tel_bien <br/>";
+            echo "Nombre: ".htmlspecialchars($nombre_bien)." <br/>";
+            echo "Contacto: ".htmlspecialchars($contacto_bien)."<br/>";
+            echo "email: ".htmlspecialchars($email_bien)." <br/>";
+            echo "Teléfono: ".htmlspecialchars($tel_bien)." <br/>";
+            echo "Nivel de Satisfacción: ".htmlspecialchars($nivelSatisfacion_bien)." <br/>";
+            foreach($mejorar as $m){
+                echo $m."</br>";
+            }
         }
     }
 ?>
@@ -110,37 +136,40 @@ Cuando los datos sean válidos, mostrar el resumen de la encuesta.-->
         </p>
         <p>
             <label for="email">Correo Electrónico:</label>
-                <input type="email" name="email" placeholder="Correo Electrónico" value="<?php echo htmlspecialchars($email_bien) ?? ''?>"></p>
+                <input type="email" name="email" placeholder="Correo Electrónico" value="<?php echo htmlspecialchars($email_bien ?? '')?>"></p>
             <?php echo $errores['email'] ?? ''?> <!-- Sive para mostrar los errores-->
         <p>
             <label for="telefono">Teléfono:</label>
-                <input type="text" placeholder="Teléfono" value="<?php echo htmlspecialchars($telefono) ?? '' ?>"></p>
+                <input type="text" name="telefono" placeholder="Teléfono" value="<?php echo htmlspecialchars($telefono) ?? ''?>"></p>
                 <?php echo $errores['telefono'] ?? '' ?>
         <p>
             <label for="nivelSatisfaccion">Nivel de Satisfacción:</label><br>
-                <input type="radio" id="muySatisfecho" name="nivelSatisfaccion" value="muySatisfecho">
+                <input type="radio" id="muySatisfecho" name="nivelSatisfaccion" value="muySatisfecho" <?php if(isset($nivelSatisfacion_bien) && $nivelSatisfacion_bien == "muySatisfecho") echo "checked"?>>
             <label for="muySatisfecho">Muy Satisfecho</label><br>
-                <input type="radio" id="satisfecho" name="nivelSatisfaccion" value="satisfecho">
+                <input type="radio" id="satisfecho" name="nivelSatisfaccion" value="satisfecho" <?php if(isset($nivelSatisfacion_bien) && $nivelSatisfacion_bien == "satisfecho") echo "checked"?>>
             <label for="muySatisfecho">Muy Satisfecho</label><br>
-                <input type="radio" id="neutral" name="nivelSatisfaccion" value="neutral">
+                <input type="radio" id="neutral" name="nivelSatisfaccion" value="neutral" <?php if(isset($nivelSatisfacion_bien) && $nivelSatisfacion_bien == "neutral") echo "checked"?>>
             <label for="neutral">Neutral</label><br>
-                <input type="radio" id="insatisfecho" name="nivelSatisfaccion" value="insatisfecho">
+                <input type="radio" id="insatisfecho" name="nivelSatisfaccion" value="insatisfecho" <?php if(isset($nivelSatisfacion_bien) && $nivelSatisfacion_bien == "insatisfecho") echo "checked"?>>
             <label for="insatisfecho">Insatisfecho</label><br>
-                <input type="radio" id="muyInsatisfecho" name="nivelSatisfaccion" value="muyInsatisfecho">
+                <input type="radio" id="muyInsatisfecho" name="nivelSatisfaccion" value="muyInsatisfecho" <?php if(isset($nivelSatisfacion_bien) && $nivelSatisfacion_bien == "muyInsatisfecho") echo "checked"?>>
             <label for="muyInsatisfecho">Muy Insatisfecho</label><br>
+            <?= $errores['nivelSatisfaccion'] ?? '' ?>
         </p>
+
         Elija tres aspectos a mejorar:
             <br>
-                <input type="checkbox" name="mejoras[]" value="atencionCliente">
+                <input type="checkbox" name="mejoras[]" value="atencionCliente" <?php if(isset($mejorar_bien) && $mejorar_bien == "atencionCliente") echo "checked"?>>
             <label for="atencionCliente">Atención al cliente</label><br>
-                <input type="checkbox" name="mejoras[]" value="tiempoEspera">
+                <input type="checkbox" name="mejoras[]" value="tiempoEspera" <?php if(isset($mejorar_bien) && $mejorar_bien == "tiempoEspera") echo "checked"?>>
             <label for="tiempoEspera">Tiempo de espera</label><br>
-                <input type="checkbox" name="mejoras[]" value="calidadProducto">
+                <input type="checkbox" name="mejoras[]" value="calidadProducto" <?php if(isset($mejorar_bien) && $mejorar_bien == "calidadProducto") echo "checked"?>>
             <label for="calidadProducto">Calidad del producto</label><br>
-                <input type="checkbox" name="mejoras[]" value="precio">
+                <input type="checkbox" name="mejoras[]" value="precio" <?php if(isset($mejorar_bien) && $mejorar_bien == "precio") echo "checked"?>>
             <label for="precio">Precio</label><br>
-                <input type="checkbox" name="mejoras[]" value="experienciaWeb">
+                <input type="checkbox" name="mejoras[]" value="experienciaWeb" <?php if(isset($mejorar_bien) && $mejorar_bien == "experienciaWeb") echo "checked"?>>
             <label for="experienciaWeb">Experiencia en la web</label><br>
+            <?= $errores['mejorar'] ?? '' ?>
         <p><input type="submit" value="Enviar"></p>
     </form>
 </body>
