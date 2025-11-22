@@ -1,5 +1,5 @@
 <!--
-🏹 La Puntería de Legolas (6_legolas.php) Dificultad: ⭐⭐ (Media)
+🏹 La Puntería de Legolas (3_legolas.php) Dificultad: ⭐⭐ (Media)
 Concepto: Calcular medias (Promedio).
 
 Legolas Verda hoja está entrenando su tiro con arco para la batalla del Abismo de Helm. Gimli le está picando, diciéndole que no es tan bueno como dice. Para callarle la boca, Legolas necesita un registro de sus puntuaciones.

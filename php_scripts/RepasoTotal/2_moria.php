@@ -1,5 +1,5 @@
 <!--
-🧙‍♂️ Las Puertas de Durin (1_moria.php) Dificultad: ⭐ (Muy Fácil)
+🧙‍♂️ Las Puertas de Durin (2_moria.php) Dificultad: ⭐ (Muy Fácil)
 Concepto: Login básico con una sola palabra ("mellon").
 
 Las Puertas de Durin

@@ -1,5 +1,5 @@
 <!--
-🐴 El Alquiler de Ponis (4_ponis.php) Dificultad: ⭐⭐⭐⭐⭐ (Nivel Jefe Final)
+🐴 El Alquiler de Ponis (666_ponis.php) Dificultad: ⭐⭐⭐⭐⭐ (Nivel Jefe Final)
 Concepto: Función matemática, validación de decimales/enteros y acumulador de deuda total.
 
 Los Hobbits han conseguido llegar a la posada "El Poni Pisador" en Bree bajo una lluvia torrencial. Necesitan salir de allí rápido para escapar de los Jinetes Negros, pero sus piernas cortas no dan para más. El posadero, Cebadilla Mantecona, accede a alquilarles sus bestias, pero tiene una tarifa un tanto peculiar y quiere que tú, como mago informático, le hagas una calculadora para no equivocarse con las cuentas.

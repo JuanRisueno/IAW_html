@@ -1,5 +1,5 @@
 <!--
-⛏️ La Minería de Moria (5_mineria.php) Dificultad: ⭐ (Estándar Examen)
+⛏️ La Minería de Moria (1_mineria.php) Dificultad: ⭐ (Estándar Examen)
 Concepto: Nivel Estándar. Acumulador simple (sumar números) con validación positiva.
 
 Gimli y su equipo de enanos están excavando en las minas de Moria buscando Mithril. El capataz necesita llevar la cuenta del peso total extraído hasta el momento para saber cuándo han alcanzado la cuota del día. No le importa quién picó qué, solo le importa que el montón de mineral crezca.

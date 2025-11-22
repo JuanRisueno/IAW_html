@@ -1,5 +1,5 @@
 <!--
-🍞 El Carro de Provisiones (3_provisiones.php) Dificultad: ⭐⭐⭐⭐ (Difícil)
+🍞 El Carro de Provisiones (555_provisiones.php) Dificultad: ⭐⭐⭐⭐ (Difícil)
 Concepto: Guardar datos complejos (Nombre + Tipo) en un Array Asociativo dentro de la sesión.
 
 Sam Gamyi está ultimando los preparativos para el largo viaje hacia el Monte del Destino. Para asegurarse de que Frodo y él no pasen hambre ni peligro, necesita organizar meticulosamente cada objeto que meten en el carro.

@@ -1,5 +1,5 @@
 <!--
-💍 El Concilio de Elrond (2_concilio.php) Dificultad: ⭐⭐ (Fácil)
+💍 El Concilio de Elrond (6_concilio.php) Dificultad: ⭐⭐ (Fácil)
 Concepto: Guardar una lista simple (Array) en la sesión y evitar duplicados.
 
 El Concilio de Elrond

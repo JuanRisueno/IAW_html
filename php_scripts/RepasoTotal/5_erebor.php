@@ -1,5 +1,6 @@
-<!--📜 Ejercicio 8 - La Puerta Secreta de Erebor Dificultad: ⭐⭐ (Media)
-Nombre del archivo: 8_erebor.php
+<!--
+📜 La Puerta Secreta de Erebor Dificultad: ⭐⭐ (Media)
+Nombre del archivo: 5_erebor.php
 
 La compañía de Thorin Escudo de Roble ha llegado a la Ladera de la Montaña Solitaria. Es el Día de Durin y la última luz del sol está revelando la cerradura. Para entrar en el reino enano y recuperar el trono, debes demostrar que eres el legítimo Rey Bajo la Montaña introduciendo tu Nombre y la Palabra Clave.
 

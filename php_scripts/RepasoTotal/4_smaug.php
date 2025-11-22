@@ -1,5 +1,5 @@
 <!--
-🐉 El Tesoro de Smaug (7_smaug.php) Dificultad: ⭐⭐ (Media)
+🐉 El Tesoro de Smaug (4_smaug.php) Dificultad: ⭐⭐ (Media)
 Concepto: Repaso general. Acumuladores, promedios, validación de 0 y botón de pánico.
 
 Bilbo Bolsón se ha infiltrado en la Montaña Solitaria. El dragón Smaug duerme sobre una montaña de oro, y Bilbo, haciendo honor a su título de "Saqueador", está intentando calcular cuánto oro hay allí, puñado a puñado.
