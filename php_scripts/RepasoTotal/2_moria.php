@@ -1,5 +1,9 @@
-<!--Ejercicio 1 - Las Puertas de Durin
-Enunciado: La Compañía del Anillo se encuentra atrapada frente a los muros de Moria. Ante ellos se alzan las majestuosas Puertas de Durin, cerradas mágicamente e imposibles de forzar. En el arco hay una inscripción antigua que dice: "Habla, amigo, y entra". Gandalf necesita tu ayuda para crear un hechizo (script) que escuche lo que él dice. Si pronuncia la palabra correcta en élfico, las puertas deben abrirse y permanecer abiertas para que todos pasen. Una vez dentro, deben poder cerrar las puertas mágicamente desde el interior para protegerse del monstruo que acecha en el lago.-->
+<!--
+🧙‍♂️ Las Puertas de Durin (1_moria.php) Dificultad: ⭐ (Muy Fácil)
+Concepto: Login básico con una sola palabra ("mellon").
+
+Las Puertas de Durin
+La Compañía del Anillo se encuentra atrapada frente a los muros de Moria. Ante ellos se alzan las majestuosas Puertas de Durin, cerradas mágicamente e imposibles de forzar. En el arco hay una inscripción antigua que dice: "Habla, amigo, y entra". Gandalf necesita tu ayuda para crear un hechizo (script) que escuche lo que él dice. Si pronuncia la palabra correcta en élfico, las puertas deben abrirse y permanecer abiertas para que todos pasen. Una vez dentro, deben poder cerrar las puertas mágicamente desde el interior para protegerse del monstruo que acecha en el lago.-->
 
 <?php
     session_start();
@@ -11,7 +15,7 @@ Enunciado: La Compañía del Anillo se encuentra atrapada frente a los muros de 
     //Cerrar la sesión
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cerrar'])){
         session_destroy(); //Cerramos la sesión
-        header("Location: 1_moria.php"); //Recargamos la página
+        header("Location: 2_moria.php"); //Recargamos la página
         exit;
     }
     

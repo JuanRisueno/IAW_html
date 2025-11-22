@@ -28,4 +28,15 @@ function existe($nombre,$lista){
     return in_array($nombre,$lista);
     */
 }
+
+//Función Calculo 
+function calculoPoni($km,$dias){
+    $base = 5;
+    $precioKmTotal = $km * 2;
+    $precioDiasTotal = $dias * 10;
+
+    $precioTotal = $base + $precioKmTotal + $precioDiasTotal;
+
+    return $precioTotal;
+}
 ?>

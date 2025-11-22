@@ -1,4 +1,8 @@
-<!--Sam Gamyi está ultimando los preparativos para el largo viaje hacia el Monte del Destino. Para asegurarse de que Frodo y él no pasen hambre ni peligro, necesita organizar meticulosamente cada objeto que meten en el carro.
+<!--
+🍞 El Carro de Provisiones (3_provisiones.php) Dificultad: ⭐⭐⭐⭐ (Difícil)
+Concepto: Guardar datos complejos (Nombre + Tipo) en un Array Asociativo dentro de la sesión.
+
+Sam Gamyi está ultimando los preparativos para el largo viaje hacia el Monte del Destino. Para asegurarse de que Frodo y él no pasen hambre ni peligro, necesita organizar meticulosamente cada objeto que meten en el carro.
 
 Debes crear una herramienta web que permita a Sam registrar cada suministro individualmente. Para cada objeto, Sam debe escribir su Nombre (por ejemplo: "Pan de Lembas") y seleccionar su Tipo desde un desplegable predefinido (las opciones permitidas son: "Comida", "Armas" o "Varios").
 
@@ -25,7 +29,7 @@ El sistema debe cumplir las siguientes normas de la Tierra Media:
     //Reiniciar la sesión
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['vaciar'])){
         session_destroy();
-        header('Location: 3_provisiones.php');
+        header('Location: 555_provisiones.php');
         exit;
     }
 

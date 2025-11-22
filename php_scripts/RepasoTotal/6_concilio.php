@@ -1,5 +1,9 @@
-<!--Ejercicio 2 - El Concilio de Elrond
-Enunciado: Has logrado cruzar Moria y llegas a Rivendel. Allí, Lord Elrond está convocando un concilio secreto. Necesita hacer una lista de los miembros que formarán la "Comunidad del Anillo".
+<!--
+💍 El Concilio de Elrond (2_concilio.php) Dificultad: ⭐⭐ (Fácil)
+Concepto: Guardar una lista simple (Array) en la sesión y evitar duplicados.
+
+El Concilio de Elrond
+Has logrado cruzar Moria y llegas a Rivendel. Allí, Lord Elrond está convocando un concilio secreto. Necesita hacer una lista de los miembros que formarán la "Comunidad del Anillo".
 
 Tu misión es crear un formulario para ir inscribiendo a los voluntarios uno a uno.
 Cada vez que escribas un nombre y pulses "Unirse", ese nombre debe guardarse en una lista mágica (un array en la sesión).
@@ -19,7 +23,7 @@ Reglas de Elrond:
     //Para reiniciar la sensión
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['disolver'])){
         session_destroy();
-        header("Location: 2_concilio.php");
+        header("Location: 6_concilio.php");
         exit;
     }
 
