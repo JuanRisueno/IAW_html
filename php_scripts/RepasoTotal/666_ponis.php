@@ -100,17 +100,17 @@ Cebadilla necesita un formulario donde introducir la Distancia (Km) y los Días 
     <h2>Alquiler de animales para el transporte</h2>
     <form action="" method="POST">
         <label for="nombre">
-            Nombre <input type="text" name="nombre" id="nombre" placeholder="Nombre del Arrendador" value="<?= htmlspecialchars($nombre) ?? '' ?>" >
+            Nombre <input type="text" name="nombre" id="nombre" placeholder="Nombre del Arrendador" value="<?= htmlspecialchars($nombreBien ?? '') ?>" >
             <?= $errores['nombre'] ?? '' ?>
         </label>
         <br>
         <label for="km">
-            KM <input type="text" name="km" id="km" placeholder="KM" value="<?= htmlspecialchars($km) ?? '' ?>" >
+            KM <input type="text" name="km" id="km" placeholder="KM" value="<?= htmlspecialchars($kmBien ?? '') ?>" >
             <?= $errores['km'] ?? '' ?>
         </label>
         <br>
         <label for="dias">
-            Días <input type="text" name="dias" id="dias" placeholder="Días" value="<?= htmlspecialchars($dias) ?? '' ?>" >
+            Días <input type="text" name="dias" id="dias" placeholder="Días" value="<?= htmlspecialchars($diasBien ?? '') ?>" >
             <?= $errores['dias'] ?? '' ?>
         </label>
         <p><input type="submit" value="Añadir"></p>

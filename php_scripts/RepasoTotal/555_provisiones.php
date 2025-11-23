@@ -45,6 +45,8 @@ El sistema debe cumplir las siguientes normas de la Tierra Media:
         //Validación del nombre de la provisión
         if(empty($provision)){
             $errores['provision'] = "<br>Tienes que poner una provisión";
+        }else{
+            $provisionBien=$provision;
         }
 
         //Validación del Select
@@ -80,7 +82,7 @@ El sistema debe cumplir las siguientes normas de la Tierra Media:
     <h2>Estas son las provisiones que Sam se va a llevar</h2>
     <form method="POST" action="">
         <label for="provision">Provision</label>
-        <p><input type="text" name="provision" placeholder="Provisión a añadir"></p>
+        <p><input type="text" name="provision" placeholder="Provisión a añadir" value="<?= htmlspecialchars($provisionBien ?? '')?>" ></p>
         <p><?= $errores['provision'] ?? '' ?></p>
 
         <label for="tipo">Tipo de la provisión</label>

@@ -67,7 +67,7 @@ Reiniciar: Un botón para "Empezar nueva ronda" (Borrar datos).-->
     <form action="" method="POST">
         <label for="disparo">
             Puntuación del disparo (0-10): 
-            <input type="text" name="puntuacion" id="puntuacion" placeholder="Puntuación" value="<?= htmlspecialchars($puntuacion) ?? ''?>" >
+            <input type="text" name="puntuacion" id="puntuacion" placeholder="Puntuación" value="<?= htmlspecialchars($puntuacion ?? '')?>" >
             <?= $errores['puntuacion'] ?? '' ?>
         </label>
         <p><input type="submit" value="Añadir Puntación"></p>

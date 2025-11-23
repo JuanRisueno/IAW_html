@@ -59,7 +59,7 @@ Reglas de Elrond:
     <form method="post" action="">
         <h2>Añadir miembro.</h2>
         <label for="nombreMiembro">Nombre del miembro a añadir.</label>
-        <p><input type="text" name="miembro" id="miembro" placeholder="Miembro a añadir" value="<?= htmlspecialchars($miembro) ?>"></p>
+        <p><input type="text" name="miembro" id="miembro" placeholder="Miembro a añadir" value="<?= htmlspecialchars($miembro ?? '') ?>"></p>
         <?= $errores['miembro'] ?? '' ?>
         
         <p><input type="submit" value="Añadir"></p>

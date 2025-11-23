@@ -74,7 +74,7 @@ Debe haber un botón de pánico "¡Smaug Despierta!" que también borre todo man
     <form action="" method="POST">
         <label for="monedas">
             Monedas de Oro: 
-            <input type="text" name="monedas" id="monedas" placeholder="Monedas de oro" value="<?= htmlspecialchars($monedas) ?? '' ?>">
+            <input type="text" name="monedas" id="monedas" placeholder="Monedas de oro" value="<?= htmlspecialchars($monedas ?? '') ?>">
             <?= $errores['monedas'] ?? '' ?>
         </label>
         <p><input type="submit" name="suma" value="Suma las monedas"></p>

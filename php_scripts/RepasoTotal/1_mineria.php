@@ -59,7 +59,7 @@ Reinicio: Un botón "Entregar cargamento al Rey" que vacía el almacén (pone el
     <h1>Contabilidad del Mithril</h1>
     <form action="" method="POST">
         <label for="gramos">Gramos de Mithril 
-            <input type="text" name="gramos" id="gramos" placeholder="Gramos de Mithril" value="<?= htmlspecialchars($gramos) ?? ''?>" >
+            <input type="text" name="gramos" id="gramos" placeholder="Gramos de Mithril" value="<?= htmlspecialchars($gramos ?? '')?>" >
             <?= $errores['gramos'] ?? '' ?>
         </label>
         <p><input type="submit" value="Enviar"></p>

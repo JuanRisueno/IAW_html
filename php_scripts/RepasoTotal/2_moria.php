@@ -57,9 +57,7 @@ La Compañía del Anillo se encuentra atrapada frente a los muros de Moria. Ante
 
         <form method="POST" action="">
             <label for="palabrasMagicas">Inscripción:</label>
-            <input type="text" name="palabrasMagicas" id="palabrasMagicas" 
-                    value="<?php echo htmlspecialchars($palabrasMagicas); ?>" 
-                    placeholder="Dila en élfico...">
+            <input type="text" name="palabrasMagicas" id="palabrasMagicas" value="<?php echo htmlspecialchars($palabrasMagicas ?? '') ?>" placeholder="Dila en élfico...">
                     
             <p style="color:red"><?php echo $errores['moria'] ?? ''; ?></p>
             

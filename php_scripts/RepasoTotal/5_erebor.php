@@ -87,7 +87,7 @@ Estando dentro, debe haber un botón "Cerrar la Puerta" que destruya la sesión 
         <form action="" method="POST">
             <label for="nombre">
                 Nombre:
-                <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre" value="<?= htmlspecialchars($nombre) ?? '' ?>">
+                <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre" value="<?= htmlspecialchars($nombre ?? '') ?>">
                 <?= $errores['nombre'] ?? '' ?>
             </label>
             <br><br>
