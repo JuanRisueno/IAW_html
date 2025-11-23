@@ -56,9 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
 
     if(empty($edad)){
-        $errores['edad'] = "El teléfono no puede estar vacío";
+        $errores['edad'] = "La edad no puede estar vacía";
     }elseif($edad <= 0 || $edad >= 121 ){
-        $errores['edad'] = "La edad tiene que ser entre 0 años y 120 años";
+        $errores['edad'] = "La edad tiene que estar entre 0 años y 120 años";
     }else{
         $edad_bien = $edad;
     }
