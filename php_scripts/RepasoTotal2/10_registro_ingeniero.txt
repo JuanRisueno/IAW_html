@@ -1,0 +1,59 @@
+Misión 10: Contratos del Cártel Pantoque 💣💰
+Archivos: funciones.php y 10_registro_ingeniero.php Dificultad: ⭐⭐⭐ (Nivel Examen / Heroico) Zona: Kezan / Azshara
+
+📜 Trasfondo: La Auditoría de Gallywix
+El Príncipe Mercante Gallywix está reclutando nuevos ingenieros para la "Corporación Pantoque" (Bilgewater Cartel). La competencia es feroz y los accidentes... frecuentes.
+
+Gallywix no se fía de nadie. Necesita un sistema que registre a los candidatos, verifique que no son espías de la Alianza (validando sus datos) y calcule automáticamente cuánto oro tendrá que pagarles (lo mínimo posible, claro).
+
+Como Jefe de Sistemas de los Goblins, tu tarea es crear el Formulario de Alta Seguridad y la Calculadora de Salarios.
+
+🛠️ Objetivos de la Misión
+Tendrás que programar dos artefactos (scripts):
+
+1. El Módulo de Cálculo (funciones.php)
+Este archivo es una librería de lógica pura (sin HTML). Gallywix quiere saber cuánto le va a costar cada ingeniero.
+
+Crea la función calcular_salario_esperado($experiencia, $especialidad):
+
+Salario Base: Todo goblin empieza cobrando 1000 monedas de oro.
+Bonus de Supervivencia (Experiencia): Por cada año que ha sobrevivido (experiencia), suma 100 monedas.
+Plus de Peligrosidad (Especialidad):
+
+Si es de "explosivos": Suma 500 monedas (riesgo de volar por los aires).
+Si es de "alquimia": Suma 200 monedas (riesgo de gases tóxicos).
+Si es de "mecanica": Suma 0 monedas (es trabajo seguro, ¡que no se quejen!).
+
+Retorno: La función debe devolver el total.
+
+2. La Terminal de Acceso (10_registro_ingeniero.php)
+Es el formulario de entrada. Debe cargar el módulo anterior (require_once) y pedir los siguientes datos con validación estricta de seguridad:
+
+El Formulario (HTML):
+
+Frecuencia de Contacto (Email): Texto.
+Comunicador Personal (Teléfono): Texto.
+Clave de la Caja Fuerte (Contraseña): Password.
+Años de Servicio: Número.
+Rama Técnica: Select (Explosivos, Mecánica, Alquimia).
+Protocolos de Seguridad (PHP):
+Email: Obligatorio. Debe ser un formato válido (usa filter_var).
+Teléfono: Gallywix solo acepta móviles de España para el roaming.
+Patrón: Empieza por 6, 7, 8 o 9 y tiene 9 dígitos en total. (Usa preg_match con /^[6-9]\d{8}$/). 
+
+Clave de Acceso: Obligatoria y Segura.
+Debe tener al menos 8 caracteres, incluir una letra y un número.
+Patrón: /^(?=.*[A-Za-z])(?=.*\d).{8,}$/. 
+
+¡Encriptación!: Si la clave es válida, conviértela en un Hash seguro (password_hash) antes de mostrarla. ¡Gallywix no guarda claves en texto plano!
+
+Experiencia: Debe ser un número entero (filter_var INT).
+
+🏆 Recompensa (Salida)
+Si el recluta pasa todas las validaciones:
+
+Muestra su Email y Teléfono.
+Muestra el Hash de seguridad de su contraseña (el churro ilegible tipo $2y$10...).
+Invoca a tu función calcular_salario_esperado() y muestra el mensaje:
+
+"¡Contratado! Tu salario inicial será de [X] monedas de oro."

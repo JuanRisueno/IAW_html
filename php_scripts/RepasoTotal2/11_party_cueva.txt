@@ -1,0 +1,28 @@
+Misión 11: Incursión en la Cueva de los Lamentos 🐍
+Archivo: 11_party_cueva.php Dificultad: ⭐⭐⭐ (Arrays Multidimensionales y Lógica) Objetivo: Recorrer un array complejo y maquetar los datos según el rol del personaje.
+
+📜 Trasfondo
+El grupo está reunido en la entrada de la Cueva de los Lamentos en Los Baldíos. Como líder de la banda, debes pasar lista y asegurarte de que cada uno ocupe su posición antes de atacar al primer Druida de la Pesadilla.
+
+📝 Tu Misión (PHP + HTML):
+1. Datos (Tu Array)
+Usa el array $roster que has creado (copia y pega tu código).
+
+2. La Formación (El Bucle)
+Debes recorrer el array con un foreach para mostrar una ficha de cada héroe. Pero atención, la visualización cambia según su rol:
+
+Si el rol es "Tank": Muéstralo en negrita <strong> y añade un icono de escudo 🛡️ al lado de su nombre.
+
+Si el rol es "heal": Muéstralo en cursiva <em> y añade un icono de corazón 💚 o cruz ➕.
+
+Si es DPS (Melee o Rango): Muéstralos normal, con unas espadas ⚔️.
+
+Requisito técnico: Usa la estructura foreach ($roster as $id => $heroe) y accede a los datos internos ($heroe['nombre'], $heroe['rol'], etc.).
+
+Resultado esperado en el navegador:
+
+🛡️ Colmillosauro (Guerrero) - Nivel 80 [Tank]
+
+💚 Baine (Chaman) - Nivel 80 [Heal]
+
+⚔️ Thrall (Chamán) - Nivel 80 [DPS Melee] ... etc.

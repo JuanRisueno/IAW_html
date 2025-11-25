@@ -105,7 +105,7 @@ Si hay errores: Mostrar mensajes específicos por campo y mantener los datos int
         <p><?= $errores['clase'] ?? '' ?></p>
         <p>Suministros de combate</p>
         <label for="pocion"><input type="checkbox" name="suministro[]" id="pocion" value="pocion" <?php if(in_array('pocion',$suministro)) echo 'checked'?> >Pocion de Sanacion</label>
-        <label for="frasco"><input type="checkbox" name="suministro[]" id="frasco" value="frasco"<?php if(in_array('frasco',$suministro)) echo 'checked'?> >Frasco de Resistencia</label>
+        <label for="frasco"><input type="checkbox" name="suministro[]" id="frasco" value="frasco"<?php if (in_array('frasco',$suministro)) echo 'checked'?> >Frasco de Resistencia</label>
         <label for="piedra"><input type="checkbox" name="suministro[]" id="piedra" value="piedra" <?php if(in_array('piedra',$suministro)) echo 'checked'?> >Piedra de Brujo</label>
         <label for="vendas"><input type="checkbox" name="suministro[]" id="vendas" value="vendas" <?php if(in_array('vendas',$suministro)) echo 'checked'?> >Vendas de Lino</label>
         <label for="comida"><input type="checkbox" name="suministro[]" id="comida" value="comida" <?php if(in_array('comida',$suministro)) echo 'checked'?> >Comida de Buff</label>
@@ -115,13 +115,13 @@ Si hay errores: Mostrar mensajes específicos por campo y mantener los datos int
     </form>
 
     <?php if(($_SERVER['REQUEST_METHOD'] == 'POST') && (empty($errores))): ?>
-        El personaje <?= $nombreBien ?> con la clase <?= $claseBien ?> Está preparado para Raid.
+        El personaje <?= htmlspecialchars($nombreBien) ?> con la clase <?= $claseBien ?> Está preparado para Raid.
         <p>Se lleva los siguientes suministros: </p>
+        <ul>
         <?php foreach ($suministro as $s): ?>
-            <ul>
                 <li><?= $s ?></li>
-            </ul>
         <?php endforeach; ?>
+        </ul>
     <?php endif; ?>
 </body>
 </html>
