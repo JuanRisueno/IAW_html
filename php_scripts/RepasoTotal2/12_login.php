@@ -1,6 +1,5 @@
-<?php 
-    session_name('logistica');
-    session_start();
+<?php
+    require_once '12_iniciar_sesion.php';
     $errores = [];
     $usuario = "";
     $pass = "";
@@ -24,12 +23,11 @@
         }
 
         if((empty($errores)) && ($usuarioBien == 'Thrall') && ($passBien == 'f0rthehorde')){
-            $_SESSION['logistica'] = true;
             $_SESSION['usuario'] = $usuarioBien;
             header('Location: 12_panel.php');
             exit;
         }else{
-            echo "Credenciales Incorrectas";
+            $errorCredenciales = "Credenciales Incorrectas";
         }
     }
 ?>
@@ -48,12 +46,16 @@
     <form action="" method="POST">
         Validación de credenciales
         <p><label for="usuario">
-            <input type="text" name="usuario" id="usuario" placeholder="Introduce tu Usuario">
+            <input type="text" name="usuario" id="usuario" placeholder="Introduce tu Usuario" value="<?= htmlspecialchars($usuario ?? '') ?>">
         </label></p>
+        <p><?= $errores['usuario'] ?? '' ?></p>
         <p><label for="pass">
             <input type="password" name="pass" id="pass" placeholder="Introduce tu contraseña">
         </label></p>
+        <p><?= $errores['pass'] ?? '' ?></p>
         <p><input type="submit" name="enviar" id="enviar" value="Enviar"></p>
     </form>
+
+    <?php if((isset($errorCredenciales))) echo "Credenciales Incorrectas" ?>
 </body>
 </html>

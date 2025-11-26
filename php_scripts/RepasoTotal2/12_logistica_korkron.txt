@@ -42,19 +42,17 @@ A. Formulario HTML:
 
     Email Oficial: Texto.
 
-    Fecha Despliegue: Date.
-
     Tipo Tropa: Select (Grunts, Incursores, Chamanes).
 
     Prioridad: Radio Button ("Normal", "Urgente").
 
-    Suministros: Checkbox Múltiple (Armas, Armaduras, Comida).
+    Equipamiento: Checkbox Múltiple (Armas, Armaduras, Joyería).
 
     Cantidad: Número.
 
     Clave Autorización: Password.
 
-    Botón: "Cerrar Sesión" (a 12_logout.php).
+    Botón: "Cerrar Sesión" (a 12_salir_sesion.php).
 
 B. Validaciones PHP (Estrictas):
 
@@ -62,13 +60,11 @@ B. Validaciones PHP (Estrictas):
 
     Email: Obligatorio. filter_var con FILTER_VALIDATE_EMAIL.
 
-    Fecha: Obligatoria. No puede ser anterior a hoy.
-
     Tropa (Select): Obligatoria. Validar contra array (in_array).
 
     Prioridad (Radio): Obligatoria. Validar contra array (normal, urgente).
 
-    Suministros (Checkbox): Opcional. Si se marca, validar que los valores son correctos (array_diff).
+    Equipamiento (Checkbox): Opcional. Si se marca, validar que los valores son correctos (array_diff).
 
     Cantidad: Obligatorio. Entero positivo (filter_var INT).
 
