@@ -26,7 +26,6 @@
         $prioridad = $_POST['prioridad'] ?? '';
         $equipamiento = $_POST['equipamiento'] ?? [];
         $autorizacion = $_POST['autorizacion'] ?? '';
-        $cantidad = filter_var($_POST['cantidad'],FILTER_SANITIZE_NUMBER_INT);
 
         //CODIGO DE MISION
         if(empty($codigo)){
@@ -40,7 +39,7 @@
         //EMAIL
         if(empty($email)){
             $errores['email'] = "Error: Tienes que ingresar un email";
-        }elseif (!filter_var($email,FILTER_VALIDATE_EMAIL)){
+        }elseif (filter_var($email,FILTER_VALIDATE_EMAIL) === false){
             $errores['email'] = "Error: Tienes que ingresar un email válido";
         }else{
             $emailBien = $email;
@@ -58,7 +57,7 @@
         //CANTIDAD
         if(empty($cantidad)){
             $errores['cantidad'] = "Error: Tienes que decirnos la cantidad de tropas que necesitas";
-        }elseif (!filter_var($cantidad,FILTER_VALIDATE_INT)){
+        }elseif (filter_var($cantidad,FILTER_VALIDATE_INT) === false){
             $errores['cantidad'] = "Error: La cantidad debe de ser un número entero";
         }else{
             $cantidadBien = $cantidad;
@@ -163,7 +162,7 @@
         </ul>
         <p>Clave de Autorización : <?= $autorizacionBien ?></p>
 
-        <p><b>El coste total de la patruya es <?= $costeTotal ?> monedas de oro</b></p>
+        <p><b>El coste total de la patrulla es <?= $costeTotal ?> monedas de oro</b></p>
     <?php endif; ?>
 </body>
 </html>
