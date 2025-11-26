@@ -33,14 +33,14 @@ function calcular_coste_total($tipo_tropa, $cantidad, array $equipamientos, $pri
     $equipamientoJoyeria = 0;
     foreach($equipamientos as $item){
         if($item === "armas"){
-            $costeEquipoUnitario += 15;
+            $equipamientoArmas += 15;
         }elseif($item === "armaduras"){
-            $costeEquipoUnitario += 5;
+            $equipamientoArmaduras += 5;
         }elseif($item === "joyeria"){
-            $costeEquipoUnitario += 5;
+            $equipamientoJoyeria += 30;
         }
     }
-    
+
     $costeTotalEquipamiento = ($equipamientoArmaduras + $equipamientoArmas + $equipamientoJoyeria) * $cantidad;
 
     if($prioridad === 'normal'){

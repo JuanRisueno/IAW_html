@@ -84,7 +84,7 @@
         if(empty($autorizacion)){
             $errores['autorizacion'] = "Error: Tienes que añadir la autorización";
         }elseif (!preg_match("/^(?=.*[A-Za-z])(?=.*\d).{8,}$/",$autorizacion)){
-            $errores['autorizacion'] = "Error: La autorización tiene que incluir al menos 1 letra, 1 númeor y ser mínimo de 8 caracteres";
+            $errores['autorizacion'] = "Error: La autorización tiene que incluir al menos 1 letra, 1 número y ser mínimo de 8 caracteres";
         }else{
             $autorizacionBien = password_hash($autorizacion,PASSWORD_DEFAULT);
         }
@@ -163,7 +163,7 @@
         </ul>
         <p>Clave de Autorización : <?= $autorizacionBien ?></p>
 
-        <p><b>El coste total de la patruya es <?= $costeTotal ?></b></p>
+        <p><b>El coste total de la patruya es <?= $costeTotal ?> monedas de oro</b></p>
     <?php endif; ?>
 </body>
 </html>
