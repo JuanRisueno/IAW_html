@@ -33,43 +33,109 @@ Reglas del Sistema:
 <?php 
     require_once 'config_mordor.php';
 
+    $errores = [];
+    $mision = '';
+    $arma = '';
+    $extras = [];
+
+    $misiones = ['patrulla','guerra','guardia'];
+    $armas = ['cimitarra','arco','latigo'];
+    $extrasValidos = ['raciones','veneno','cuerda'];
+
     if(!isset($_SESSION['orco'])){
-        session_destroy();
         header('Location: 8_login.php');
         exit;
     }
-?>
 
+    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['terminar'])){
+        
+        $mision = $_POST['mision'] ?? '';
+        $arma = $_POST['arma'] ?? '';
+        $extras = $_POST['extras'] ?? [];
+
+        if(empty($mision)){
+            $errores['mision'] = "<br>Error: Elige misión.";
+        } elseif(!in_array($mision, $misiones)){
+            $errores['mision'] = "<br>Error: Misión inválida.";
+        } else {
+            $misionBien = $mision;
+        }
+
+        if(empty($arma)){
+            $errores['arma'] = "<br>Error: Coge arma.";
+        } elseif(!in_array($arma, $armas)){
+            $errores['arma'] = "<br>Error: Arma inválida.";
+        } else {
+            $armaBien = $arma;
+        }
+
+        if(empty($extras)){
+            $errores['extras'] = "<br>Error: Coge extras.";
+        } elseif(!empty(array_diff($extras, $extrasValidos))){
+            $errores['extras'] = "<br>Error: Extra prohibido.";
+        } else {
+            $extrasBien = $extras;
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARSENAL ORCO</title>
 </head>
 <body>
-    <h1>Bienvenido al Arsenal, <?= $_SESSION['orco'] ?></h1>
-    <h2>Este es el equipo a tu disposición</h2>
+    <h1>Bienvenido, <?= htmlspecialchars($_SESSION['orco']) ?></h1>
 
     <form action="" method="POST">
-        <h3>Elije tu misión</h3>
-        <label for="patrulla"><input type="radio" name="mision" id='patrulla' value="patrulla"> Patrulla</label>
-        <label for="guerra"><input type="radio" name="mision" id="guerra" value="guerra"> Guerra</label>
-        <label for="guardia"><input type="radio" name="mision" id="guardia" value="guardia"> Guardia</label>
-        <label for="arma">
-            <h3>Elije tu arma principal</h3>
-            <select name="arma" id="arma">
-                <option value="">Elije tu arma</option>
-                <option value="cimitarra">Cimitarra</option>
-                <option value="arco">Arco</option>
-                <option value="latigo">Látigo</option>
-            </select>
-        </label>
-        <h3>Elije Extras (mínimo 1)</h3>
-        <label for="raciones"><input type="checkbox" name="extras[]" id="raciones">Raciones</label>
-        <label for="veneno"><input type="checkbox" name="extras[]" id="veneno">Veneno</label>
-        <label for="cuerda"><input type="checkbox" name="extras[]" id="cuerda">Cuerda</label>
-        <p><input type="submit" name="terminar" id="Terminar"></p>
+        <h3>Misión</h3>
+        <label><input type="radio" name="mision" value="patrulla" <?php if($mision == 'patrulla') echo "checked"?>> Patrulla</label>
+        <label><input type="radio" name="mision" value="guerra" <?php if($mision == 'guerra') echo "checked"?>> Guerra</label>
+        <label><input type="radio" name="mision" value="guardia" <?php if($mision == 'guardia') echo "checked"?>> Guardia</label>
+        <?= $errores['mision'] ?? '' ?>
+
+        <h3>Arma</h3>
+        <select name="arma">
+            <option value="">Elije arma</option>
+            <option value="cimitarra" <?php if($arma == 'cimitarra') echo 'selected' ?>>Cimitarra</option>
+            <option value="arco" <?php if($arma == 'arco') echo 'selected' ?>>Arco</option>
+            <option value="latigo" <?php if($arma == 'latigo') echo 'selected' ?>>Látigo</option>
+        </select>
+        <?= $errores['arma'] ?? '' ?>
+
+        <h3>Extras</h3>
+        <label><input type="checkbox" name="extras[]" value="raciones" <?php if(in_array('raciones', $extras)) echo "checked"?>> Raciones</label>
+        <label><input type="checkbox" name="extras[]" value="veneno" <?php if(in_array('veneno', $extras)) echo "checked"?>> Veneno</label>
+        <label><input type="checkbox" name="extras[]" value="cuerda" <?php if(in_array('cuerda', $extras)) echo "checked"?>> Cuerda</label>
+        <?= $errores['extras'] ?? '' ?>
+        
+        <p><input type="submit" name="terminar" value="Tramitar"></p>
     </form>
+
+    <?php if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['terminar']) && empty($errores)): ?>
+        <div style="border: 2px solid green; padding: 10px; margin-top: 20px;">
+            <h2>¡Solicitud Aceptada!</h2>
+            <p><strong>Orco:</strong> <?= htmlspecialchars($_SESSION['orco']) ?></p>
+            <ul>
+                <li><strong>Misión:</strong> <?= htmlspecialchars($misionBien) ?></li>
+                <li><strong>Arma:</strong> <?= htmlspecialchars($armaBien) ?> </li>
+                <li><strong>Extras:</strong> <?= htmlspecialchars(implode(", ", $extrasBien)) ?></li>
+            </ul>
+            
+            <p>Ya tienes tu equipo. Ahora calcula las provisiones.</p>
+            <form action="9_raciones.php" method="POST">
+                <input type="submit" value="Ir a Logística (Siguiente Nivel) >>">
+            </form>
+
+        </div>
+    <?php endif; ?>
+    
+    <?php 
+        if(isset($_POST['logout'])){
+            session_destroy();
+            header('Location: 8_login.php');
+            exit;
+        }
+    ?>
 </body>
 </html>

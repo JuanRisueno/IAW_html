@@ -1,0 +1,101 @@
+Ejercicio 12: Logística Kor'kron (Versión FINAL) 🛡️🔥
+
+Archivos: 12_funciones.php, 12_login.php, 12_panel.php, 12_logout.php. Dificultad: ⭐⭐⭐⭐⭐ (Nivel "Jefe de Banda Mítico")
+
+📜 Trasfondo
+
+El Intendente necesita aprobar envíos de suministros. El sistema debe ser seguro, validar cada dato al milímetro y calcular costes variables según la urgencia.
+
+📝 Instrucciones Detalladas:
+
+1. 12_funciones.php (Librería)
+
+Función: calcular_coste_total($tipo_tropa, $cantidad, $num_suministros, $prioridad):
+
+    Coste Tropas: Grunts (10), Incursores (20), Chamanes (50).
+
+    Coste Suministros: Cada suministro extra suma 5 monedas.
+
+    Coste Prioridad (Radio):
+
+        Si es "normal": +0 monedas.
+
+        Si es "urgente": +50 monedas (Tasa de velocidad Goblin).
+
+    Devuelve: El coste total.
+
+2. 12_login.php (La Puerta)
+
+    HTML: Usuario y Contraseña.
+
+    PHP: Valida usuario "Thrall" y contraseña "horda".
+
+    Acción: Si OK -> session_start + Redirección a 12_panel.php.
+
+3. 12_panel.php (El Monstruo de las Validaciones)
+
+Seguridad: Si no hay sesión (empty($_SESSION...)), header al login y exit.
+
+A. Formulario HTML:
+
+    Código Misión: Texto (Ej: M-104).
+
+    Email Oficial: Texto.
+
+    Fecha Despliegue: Date.
+
+    Tipo Tropa: Select (Grunts, Incursores, Chamanes).
+
+    Prioridad: Radio Button ("Normal", "Urgente").
+
+    Suministros: Checkbox Múltiple (Armas, Armaduras, Comida).
+
+    Cantidad: Número.
+
+    Clave Autorización: Password.
+
+    Botón: "Cerrar Sesión" (a 12_logout.php).
+
+B. Validaciones PHP (Estrictas):
+
+    Código: Obligatorio. Regex: /^M-\d{3}$/ (Empieza por M- y 3 dígitos).
+
+    Email: Obligatorio. filter_var con FILTER_VALIDATE_EMAIL.
+
+    Fecha: Obligatoria. No puede ser anterior a hoy.
+
+    Tropa (Select): Obligatoria. Validar contra array (in_array).
+
+    Prioridad (Radio): Obligatoria. Validar contra array (normal, urgente).
+
+    Suministros (Checkbox): Opcional. Si se marca, validar que los valores son correctos (array_diff).
+
+    Cantidad: Obligatorio. Entero positivo (filter_var INT).
+
+    Clave: Obligatoria.
+
+        Regex: /^(?=.*[A-Za-z])(?=.*\d).{8,}$/ (8 chars, 1 letra, 1 número).
+
+        Si es válida -> Generar Hash.
+
+C. Resultado:
+
+    Sticky Form: Mantener TODOS los datos si falla (incluido el radio marcado y los checkboxes).
+
+    Éxito:
+
+        Mostrar mensaje de aprobación.
+
+        Mostrar Hash de la clave.
+
+        Llamar a la función y mostrar: "Coste Total: X oro".
+
+4. 12_logout.php (Salida)
+
+    Borrado de variables ($_SESSION = []).
+
+    Borrado de Cookie (bloque setcookie).
+
+    Destrucción (session_destroy).
+
+    Redirección al Login.

@@ -16,4 +16,8 @@ function calcular_salario_esperado($experiencia, $especialidad){
     $salario = $oroBase + $oroExperiencia + $oroEspecialidad;
 
     return $salario;
-}
+};
+
+function calcular_coste_total($tipo_tropa, $cantidad, $num_suministros, $prioridad){
+    
+};
