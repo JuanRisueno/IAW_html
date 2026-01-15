@@ -1,8 +1,8 @@
 <?php
 
-define('SERVER', '');
-define('USER', '');
-define('PASS', '');
+define('SERVER', 'pgsql:host = postgres_db;dbname=peliculas');
+define('USER', 'usuario');
+define('PASS', 'oretania');
 
 function conectar():PDO|null{
     try{
