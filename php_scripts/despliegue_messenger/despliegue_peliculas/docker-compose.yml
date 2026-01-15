@@ -1,0 +1,59 @@
+services:
+  # Contenedor para el servidor web (Apache con PHP)
+  web:
+    build: .
+
+    # Nombre que le damos al contenedor
+    container_name: apache_peliculas
+    volumes:
+      - ./html:/var/www/html
+    
+    # Redirección de puertos
+    # El de la izquierda es el puerto de nuestra máquina y el de la derecha el del contenedor
+    ports:
+      - "8070:80"
+    depends_on:
+      - postgres_db
+
+    # Red que va a usar
+    networks:
+      - mi_red
+
+
+  # Servicio PostgreSQL
+  postgres_db:
+    image: postgres
+    container_name: postgres_peliculas
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5472:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+      # Mapeamos el script de Postgres
+      - ./bd/script_peliculas_postgres.sql:/docker-entrypoint-initdb.d/init.sql
+    # Red que va a usar
+    networks:
+      - mi_red
+
+
+  # (Opcional) Interfaz web para ver las BDs gráficamente
+  adminer:
+    image: adminer
+    container_name: adminer_peliculas
+    restart: always
+    ports:
+      - "8071:8080"
+    depends_on:
+      - postgres_db
+    # Red que va a usar
+    networks:
+      - mi_red
+
+# Redes usadas por mis contenedores
+networks:
+  mi_red:
+
+volumes:
+  postgres_data:
